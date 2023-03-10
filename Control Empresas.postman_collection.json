@@ -1,0 +1,348 @@
+{
+	"info": {
+		"_postman_id": "bbd7177f-af69-4731-b88c-20b0b6ce3781",
+		"name": "Control Empresas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Empresa",
+			"item": [
+				{
+					"name": "POST EMPRESA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Camarones\",\r\n    \"correo\": \"camarones@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"rol\": \"Restaurante\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/empresa/agregar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresa",
+								"agregar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT EMPRESA",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NzVmYTcwZGZmMmY0Y2UwMmU2NTkiLCJpYXQiOjE2NzgwNzk2OTcsImV4cCI6MTY3ODA5NDA5N30.gRvzX1_C3q0-LJvVkIMzTbByCLqTKVgqP-VI_OtqNL8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Churrasco\",\r\n    \"correo\": \"churrasco@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"rol\": \"Restaurante\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/empresa/editar/640575fa70dff2f4ce02e659",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresa",
+								"editar",
+								"640575fa70dff2f4ce02e659"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DEL EMPRESA",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NzVmYTcwZGZmMmY0Y2UwMmU2NTkiLCJpYXQiOjE2NzgwNzk2OTcsImV4cCI6MTY3ODA5NDA5N30.gRvzX1_C3q0-LJvVkIMzTbByCLqTKVgqP-VI_OtqNL8",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/empresa/eliminar/6405761b70dff2f4ce02e65d",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresa",
+								"eliminar",
+								"6405761b70dff2f4ce02e65d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET EMPRESAS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/empresa/mostrar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresa",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sucursales",
+			"item": [
+				{
+					"name": "POST SUCURSALES",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NzVmYTcwZGZmMmY0Y2UwMmU2NTkiLCJpYXQiOjE2NzgwNzk2OTcsImV4cCI6MTY3ODA5NDA5N30.gRvzX1_C3q0-LJvVkIMzTbByCLqTKVgqP-VI_OtqNL8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"municipio\": \"El amanecer\",\r\n    \"direccion\": \"Zona 2, Hipodrono del norte\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/empresa/mostrar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresa",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT SUCURSALES",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NzVmYTcwZGZmMmY0Y2UwMmU2NTkiLCJpYXQiOjE2NzgwNzk2OTcsImV4cCI6MTY3ODA5NDA5N30.gRvzX1_C3q0-LJvVkIMzTbByCLqTKVgqP-VI_OtqNL8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"municipio\": \"Mixco\",\r\n    \"direccion\": \"Zon 8, 13 avenida\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/sucursal/editar/6405777a70dff2f4ce02e677",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sucursal",
+								"editar",
+								"6405777a70dff2f4ce02e677"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET SUCURSALES",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/sucursal/mostrar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sucursal",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DEL SUCURSALES",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NzVmYTcwZGZmMmY0Y2UwMmU2NTkiLCJpYXQiOjE2NzgwNzk2OTcsImV4cCI6MTY3ODA5NDA5N30.gRvzX1_C3q0-LJvVkIMzTbByCLqTKVgqP-VI_OtqNL8",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/sucursal/eliminar/6405774270dff2f4ce02e674",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sucursal",
+								"eliminar",
+								"6405774270dff2f4ce02e674"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"Pablo@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AGREGAR SUCURSAL A EMPRESA",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NzYzODcwZGZmMmY0Y2UwMmU2NjEiLCJpYXQiOjE2NzgwODAwNDksImV4cCI6MTY3ODA5NDQ0OX0.TUua7yjAo6K_cgatAuMznK1JjRCnBwYgtMtN6P9DERQ",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"municipio\": \" \",\r\n    \"direccion\": \" \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/sucursal/asignar/6405777a70dff2f4ce02e677",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sucursal",
+						"asignar",
+						"6405777a70dff2f4ce02e677"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET MIS SUCURSALES",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA0ZTRlY2ZmMjgwMWNkM2MxMDI2YjEiLCJpYXQiOjE2NzgwNDMwMjMsImV4cCI6MTY3ODA1NzQyM30.bcjftCnpJwfkjvZa1zfYKl1PofMzxIUNwMSJCvV4gUI",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/empresa/MySucursales",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empresa",
+						"MySucursales"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

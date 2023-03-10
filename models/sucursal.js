@@ -17,4 +17,4 @@ const SucursalSchema = new Schema({
     }
 });
 
-module.exports = model('Sucursal', SucursalSchema);
+module.exports = model('Sucursales', SucursalSchema);
